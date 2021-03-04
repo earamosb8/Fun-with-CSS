@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+    color:  #9B2A35;
+    border-bottom: 2px solid transparent;    
+    transition: all .5s steps(1,5);
+    position: relative;
+
+}
+
+a::before{
+content: ''; 
+position: absolute;
+top: 25px;
+width: 100%;
+transform: scaleX(0);
+transform-origin: left;
+height: 2px;
+transition: transform 0.5s ease-in-out;
+background-color: #9B2A35;
+}
+
+a:hover::before{
+    transform: scaleX(1);
+}
